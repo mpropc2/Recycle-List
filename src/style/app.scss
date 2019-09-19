@@ -1,13 +1,16 @@
 
 #menu-dropdown {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
     width: 200px;
-    height: 200px;
-    overflow-y: auto;
+    height: 8000px;
     .element {
         height: 20px;
         border: 1px solid;
     }
+}
+
+.menu-container {
+    border: 1px solid;
+    height: 200px;
+    width: 200px;
+    overflow: auto;
 }
