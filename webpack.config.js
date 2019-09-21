@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Require  html-webpack-plugin plugin
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   entry: __dirname + "/src/app/index.js", // webpack entry point. Module to start building dependency graph
@@ -32,10 +33,11 @@ module.exports = {
       new HtmlWebpackPlugin({
           template: __dirname + "/src/public/index.html",
           inject: 'body'
-      })
+      }),
+      new OpenBrowserPlugin({ url: 'http://localhost:3000' })
   ],
   devServer: {  // configuration for webpack-dev-server
       contentBase: './src/public',  //source of static assets
-      port: 7700, // port to run dev-server
+      port: 3000, // port to run dev-server
   } 
 };
